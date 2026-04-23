@@ -161,11 +161,41 @@ export default function HomeClient() {
         /* ============ HERO ============ */
         .bp-hero { position: relative; min-height: 100vh; overflow: hidden; color: #fff; display: flex; align-items: flex-end; margin-top: -88px; padding-top: 88px; }
         .bp-hero-bg { position: absolute; inset: 0; z-index: 0; }
-        .bp-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
-        .bp-hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(8,23,72,0.25) 0%, rgba(8,23,72,0.55) 55%, rgba(8,23,72,0.95) 100%); }
-        .bp-hero-stripe { position: absolute; top: 0; right: 0; width: 160px; height: 100%; background: linear-gradient(180deg, #E30613 0%, #B80510 100%); z-index: 1; transform: skewX(-6deg) translateX(80px); opacity: 0.9; }
-        .bp-hero-inner { position: relative; z-index: 2; width: 100%; max-width: 1320px; margin: 0 auto; padding: 160px 32px 96px; }
-        .bp-hero-copy { max-width: 900px; }
+        .bp-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+        .bp-hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(105deg, rgba(8,23,72,0.85) 0%, rgba(8,23,72,0.55) 45%, rgba(8,23,72,0.35) 75%, rgba(8,23,72,0.7) 100%), linear-gradient(180deg, rgba(8,23,72,0.15) 0%, rgba(8,23,72,0.5) 100%); }
+        .bp-hero-stripe { position: absolute; top: 0; right: 0; width: 160px; height: 100%; background: linear-gradient(180deg, #E30613 0%, #B80510 100%); z-index: 1; transform: skewX(-6deg) translateX(80px); opacity: 0.85; }
+        .bp-hero-inner {
+          position: relative; z-index: 2; width: 100%; max-width: 1320px; margin: 0 auto; padding: 150px 32px 96px;
+          display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr); gap: 56px; align-items: center;
+        }
+        .bp-hero-copy { max-width: 720px; }
+        .bp-hero-logo-plate {
+          position: relative; padding: 36px 36px 32px; background: rgba(250, 247, 241, 0.97);
+          border-radius: 4px; box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(227, 6, 19, 0.18);
+          backdrop-filter: blur(10px); display: flex; flex-direction: column; gap: 18px;
+          transform: rotate(-1.5deg);
+        }
+        .bp-hero-logo-plate::before {
+          content: ""; position: absolute; top: -10px; right: -10px; width: 60%; height: 6px;
+          background: linear-gradient(90deg, #1A37A8 0%, #E30613 100%); transform: skewX(-8deg);
+        }
+        .bp-hero-logo-plate img { width: 100%; height: auto; max-height: 200px; object-fit: contain; display: block; }
+        .bp-hero-logo-tag {
+          display: inline-flex; align-items: center; gap: 8px;
+          padding: 6px 12px; background: #0A0F1E; color: #E6E6F0;
+          font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+          border-radius: 2px; align-self: flex-start;
+        }
+        .bp-hero-logo-tag::before {
+          content: ""; width: 6px; height: 6px; border-radius: 50%; background: #FF4B57;
+          box-shadow: 0 0 0 3px rgba(255,75,87,0.32); animation: pulseDot 2s ease-in-out infinite;
+        }
+        .bp-hero-logo-foot {
+          padding-top: 14px; border-top: 1px solid #E4DDD0;
+          display: flex; align-items: center; justify-content: space-between; gap: 12px;
+          font-size: 11.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #1A37A8;
+        }
+        .bp-hero-logo-foot .red { color: #E30613; }
         .bp-hero-pill { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28); border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #fff; margin-bottom: 28px; backdrop-filter: blur(8px); }
         .bp-hero-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: #E30613; box-shadow: 0 0 0 4px rgba(227,6,19,0.35); animation: pulseDot 2s ease-in-out infinite; }
         @keyframes pulseDot { 50% { box-shadow: 0 0 0 10px rgba(227,6,19,0); } }
@@ -329,17 +359,28 @@ export default function HomeClient() {
         .bp-btn-outline:hover { background: #fff; color: #0A0F1E; transform: translateY(-3px); }
 
         /* ============ MOBILE ============ */
+        @media (max-width: 1100px) {
+          .bp-hero-inner { grid-template-columns: 1fr; gap: 36px; }
+        }
         @media (max-width: 900px) {
-          .bp-hero { min-height: 88vh; align-items: center; }
-          .bp-hero-inner { padding: 130px 22px 70px; }
-          .bp-hero-stripe { width: 80px; transform: skewX(-6deg) translateX(40px); }
-          .bp-hero-pill { font-size: 10.5px; letter-spacing: 0.18em; padding: 6px 12px; margin-bottom: 22px; }
-          .bp-hero-desc { font-size: 15px; margin-bottom: 32px; }
-          .bp-hero-ctas { flex-direction: column; gap: 10px; width: 100%; margin-bottom: 36px; }
+          .bp-hero { min-height: auto; align-items: stretch; }
+          .bp-hero-inner { padding: 120px 22px 64px; gap: 28px; text-align: center; justify-items: center; }
+          .bp-hero-stripe { width: 50px; transform: skewX(-6deg) translateX(25px); opacity: 0.7; }
+          .bp-hero-copy { max-width: 100%; }
+          .bp-hero-pill { font-size: 10.5px; letter-spacing: 0.16em; padding: 6px 12px; margin-bottom: 18px; align-self: center; }
+          .bp-hero-desc { font-size: 15px; margin: 0 auto 28px; max-width: 38ch; }
+          .bp-hero-ctas { flex-direction: column; gap: 10px; width: 100%; margin-bottom: 32px; justify-content: center; }
           .bp-hero-ctas > * { width: 100%; justify-content: center; padding: 16px 22px; font-size: 13.5px; }
-          .bp-hero-trust { gap: 16px; padding-top: 20px; }
+          .bp-hero-trust { gap: 14px; padding-top: 20px; justify-content: center; max-width: 100%; }
           .bp-hero-trust-item { font-size: 10.5px; letter-spacing: 0.08em; }
           .bp-hero-scroll { display: none; }
+          /* Logo plate centered up top, sized big */
+          .bp-hero-logo-plate {
+            order: -1; transform: none; width: min(420px, 90vw); padding: 26px 28px 24px;
+            margin: 0 auto; box-shadow: 0 18px 44px rgba(0,0,0,0.45);
+          }
+          .bp-hero-logo-plate img { max-height: 140px; }
+          .bp-hero-logo-foot { font-size: 10.5px; letter-spacing: 0.12em; }
 
           .bp-services, .bp-ba, .bp-about, .bp-tests, .bp-final, .bp-values { padding: 56px 0; }
           .bp-values-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 22px; }
@@ -442,6 +483,16 @@ export default function HomeClient() {
               <span className="bp-hero-trust-item">
                 <MapPin size={14} style={{ color: "#FF4B57" }} /> Based in Altoona
               </span>
+            </div>
+          </div>
+
+          {/* Brand plate — intentional logo placement */}
+          <div className="bp-hero-logo-plate">
+            <span className="bp-hero-logo-tag">Established Local · Iowa</span>
+            <img src="/logo.png" alt="Budget Pro Painting & Remodeling LLC" />
+            <div className="bp-hero-logo-foot">
+              <span>Painting · Staining</span>
+              <span className="red">Epoxy · Cabinets</span>
             </div>
           </div>
         </div>
