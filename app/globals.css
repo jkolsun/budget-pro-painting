@@ -1,0 +1,324 @@
+/* ==========================================================================
+   BUDGET PRO PAINTING & REMODELING — CLEAN & MODERN DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Brand blue — from logo wordmark (Budget Pro Painting) */
+  --primary: #1A37A8;
+  --primary-light: #2449C7;
+  --primary-dark: #0F2575;
+  --primary-deep: #081748;
+
+  /* Brand red — from logo paint swipe (CTA + accent) */
+  --accent: #E30613;
+  --accent-dark: #B80510;
+  --accent-light: #FF4B57;
+
+  /* Supporting cream neutrals */
+  --white: #FAF7F1;       /* off-white — replaces pure white */
+  --off-white: #F2EDE3;
+  --cream-deep: #E4DDD0;
+
+  /* Ink tones */
+  --slate-dark: #0A0F1E;
+  --slate-mid: #3A4158;
+  --slate-light: #7A8299;
+  --border: #D6D0C0;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(10, 15, 30, 0.08);
+  --shadow-md: 0 4px 14px rgba(10, 15, 30, 0.12);
+  --shadow-lg: 0 16px 36px rgba(10, 15, 30, 0.18);
+  --shadow-xl: 0 28px 56px rgba(10, 15, 30, 0.25);
+
+  /* Transitions */
+  --tx: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --tx-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+  max-width: 100vw;
+  overscroll-behavior-x: none;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--slate-dark);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  max-width: 100vw;
+  overscroll-behavior-x: none;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--slate-dark);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--slate-dark);
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(21, 128, 61, 0.25);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--slate-dark);
+}
+.btn-accent:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(132, 204, 22, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--slate-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--slate-dark);
+  border: 2px solid var(--slate-dark);
+}
+.btn-outline-dark:hover {
+  background: var(--slate-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 20px 36px;
+  font-size: 16px;
+}
+
+/* ==========================================================================
+   FORMS
+   ========================================================================== */
+.input, .textarea, .select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--slate-dark);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.input:focus, .textarea:focus, .select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(21, 128, 61, 0.12);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 140px;
+  font-family: inherit;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--slate-dark);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.5); }
+  100% { box-shadow: 0 0 0 16px rgba(132, 204, 22, 0); }
+}
+
+.fade-in { animation: fadeIn 0.8s ease forwards; }
+.slide-up { animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+/* ==========================================================================
+   SCROLL REVEAL
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.from-left { transform: translateX(-40px); }
+.reveal.from-left.is-visible { transform: translateX(0); }
+.reveal.from-right { transform: translateX(40px); }
+.reveal.from-right.is-visible { transform: translateX(0); }
+.reveal.scale-in { transform: scale(0.95); }
+.reveal.scale-in.is-visible { transform: scale(1); }
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.section {
+  padding: 112px 0;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--off-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Spacing helpers for bottom sticky CTA */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 72px;
+  }
+}
