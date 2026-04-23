@@ -8,9 +8,12 @@ const serviceAreas = [
 ];
 
 const services = [
-  { href: "/services/painting", label: "Interior & Exterior Painting" },
+  { href: "/services/interior-painting", label: "Interior Painting" },
+  { href: "/services/exterior-painting", label: "Exterior Painting" },
   { href: "/services/staining", label: "Deck & Fence Staining" },
+  { href: "/services/commercial-painting", label: "Commercial Painting" },
   { href: "/services/garage-floor", label: "Garage Floor Coatings" },
+  { href: "/services/cabinet-refinishing", label: "Cabinet Refinishing" },
 ];
 
 const quickLinks = [
@@ -104,11 +107,11 @@ export default function Footer() {
                   <div style={{ fontSize: 15, fontWeight: 700, color: "#fff" }}>(515) 505-6429</div>
                 </div>
               </a>
-              <a href="mailto:bpprllc@gmail.com" style={{ display: "flex", alignItems: "flex-start", gap: 12, color: "#D6D0C0" }}>
+              <a href="mailto:Info@budgetpropainter.com" style={{ display: "flex", alignItems: "flex-start", gap: 12, color: "#D6D0C0" }}>
                 <Mail size={17} style={{ color: "#FF4B57", flexShrink: 0, marginTop: 2 }} />
                 <div>
                   <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#7A8299" }}>Email</div>
-                  <div style={{ fontSize: 14, fontWeight: 600, color: "#fff", wordBreak: "break-all" }}>bpprllc@gmail.com</div>
+                  <div style={{ fontSize: 14, fontWeight: 600, color: "#fff", wordBreak: "break-all" }}>Info@budgetpropainter.com</div>
                 </div>
               </a>
               <div style={{ display: "flex", alignItems: "flex-start", gap: 12, color: "#D6D0C0" }}>

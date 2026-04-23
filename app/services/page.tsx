@@ -1,29 +1,45 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Paintbrush, Droplets, Home as HomeIcon, ArrowRight, Phone } from "lucide-react";
+import { Paintbrush, PaintRoller, Building2, Droplets, Home as HomeIcon, ChefHat, ArrowRight, Phone } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Interior & exterior painting, deck & fence staining, and garage floor coatings in Altoona, Des Moines, and central Iowa.",
+  description: "Interior painting, exterior painting, staining, commercial painting, garage floor coatings, and cabinet refinishing in Altoona, Des Moines, and central Iowa.",
 };
 
 const services = [
   {
     Icon: Paintbrush,
-    title: "Interior & Exterior Painting",
-    desc: "Whole-house repaints, accent walls, commercial exteriors. Proper prep, sharp cut lines, premium product — finishes that actually last.",
-    href: "/services/painting",
-    img: "/photos/residential-estate.jpg",
+    title: "Interior Painting",
+    desc: "Whole-house repaints, single rooms, accent walls, trim, ceilings. Clean lines, premium product, factory-smooth finish.",
+    href: "/services/interior-painting",
+    img: "/photos/web-interior-color.jpg",
     swatch: "#1A37A8",
+  },
+  {
+    Icon: PaintRoller,
+    title: "Exterior Painting",
+    desc: "Siding, trim, fascia, shutters. Weather-grade products that survive Iowa winters. Pressure-wash, prep, and two full coats every time.",
+    href: "/services/exterior-painting",
+    img: "/photos/residential-estate.jpg",
+    swatch: "#E30613",
   },
   {
     Icon: Droplets,
     title: "Deck & Fence Staining",
     desc: "Strip, sand, seal. Decks and fences restored and protected so Iowa weather can't tear them apart another season.",
     href: "/services/staining",
-    img: "/photos/ba5-after.jpg",
+    img: "/photos/web-deck-stain.jpg",
     swatch: "#8B3A16",
+  },
+  {
+    Icon: Building2,
+    title: "Commercial Painting",
+    desc: "Retail, office, multi-tenant, industrial. Interior and exterior with after-hours scheduling so your business never loses a day.",
+    href: "/services/commercial-painting",
+    img: "/photos/ba3-after.jpg",
+    swatch: "#0A0F1E",
   },
   {
     Icon: HomeIcon,
@@ -32,6 +48,14 @@ const services = [
     href: "/services/garage-floor",
     img: "/photos/commercial-white-black.jpg",
     swatch: "#4A4E52",
+  },
+  {
+    Icon: ChefHat,
+    title: "Kitchen & Cabinet Refinishing",
+    desc: "Fraction-of-a-remodel cost. Doors sprayed in a controlled booth for a factory-smooth finish. New kitchen, no gut job.",
+    href: "/services/cabinet-refinishing",
+    img: "/photos/web-cabinets.jpg",
+    swatch: "#2449C7",
   },
 ];
 
@@ -93,8 +117,8 @@ export default function ServicesPage() {
             <span className="bp-svc-hero-pill">
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FF4B57" }} /> Services
             </span>
-            <h1>Three services. <em>Done right.</em></h1>
-            <p>Every service is handled by Peter personally — the same owner who walked your property and gave you the quote. No subcontractors you've never met.</p>
+            <h1>Six services. <em>One standard.</em></h1>
+            <p>Residential, commercial, interior, exterior, staining, garage floors, cabinets — every service handled by Peter personally. No subcontractors you've never met.</p>
           </ScrollReveal>
         </div>
       </section>
@@ -129,7 +153,7 @@ export default function ServicesPage() {
           <h2>Not sure which one? <em>Just ask.</em></h2>
           <p>Peter will walk your project and tell you straight what it actually needs — no bundle pitch, no upsell.</p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/quote" className="bp-btn bp-btn-red">Get a Free Quote <ArrowRight size={16} /></Link>
+            <Link href="/quote" className="bp-btn bp-btn-red">Get an Estimate <ArrowRight size={16} /></Link>
             <a href="tel:+15155056429" className="bp-btn bp-btn-outline"><Phone size={16} /> (515) 505-6429</a>
           </div>
         </ScrollReveal>

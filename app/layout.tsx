@@ -65,7 +65,7 @@ const jsonLd = {
   "@id": "https://budgetpropainting.com",
   url: "https://budgetpropainting.com",
   telephone: "+1-515-505-6429",
-  email: "bpprllc@gmail.com",
+  email: "Info@budgetpropainter.com",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",

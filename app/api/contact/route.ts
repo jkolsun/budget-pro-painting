@@ -121,7 +121,7 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail({
       from: `"Budget Pro Painting Website" <${user}>`,
-      to: "bpprllc@gmail.com",
+      to: "Info@budgetpropainter.com",
       replyTo: email ? `${name} <${email}>` : undefined,
       subject: `New ${formType}: ${name || "Website Lead"}${city ? " — " + city : ""}`,
       text: textLines.join("\n"),

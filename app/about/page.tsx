@@ -193,24 +193,18 @@ export default function AboutPage() {
                   marginBottom: 24,
                 }}
               >
-                Started with a
+                Trusted local.
                 <br />
-                <span style={{ color: "#1A37A8" }}>single mower.</span>
+                <span style={{ color: "#1A37A8" }}>Des Moines proud.</span>
               </h2>
               <p style={{ fontSize: 17, color: "#3A4158", lineHeight: 1.8, marginBottom: 18 }}>
-                Peter founded Budget Pro Painting in 2021 with a pickup truck,
-                a trusty mower, and a belief that Polk County deserved better painting service
-                than the big corporate franchises were offering.
+                Budget Pro Painting and Remodeling, LLC is a trusted local company dedicated to delivering high-quality painting and remodeling services throughout Des Moines and surrounding Iowa communities.
               </p>
               <p style={{ fontSize: 17, color: "#3A4158", lineHeight: 1.8, marginBottom: 18 }}>
-                A few years later, the team has grown — and so has the service menu. But
-                the commitment hasn&apos;t changed: every visit is personal, every job
-                matters, and every customer is a neighbor.
+                We specialize in residential and commercial projects, offering interior and exterior painting, drywall and plastering, staining, remodeling, and kitchen and cabinet refinishing.
               </p>
               <p style={{ fontSize: 17, color: "#3A4158", lineHeight: 1.8, marginBottom: 32 }}>
-                From whole-house repaints to garage floor coatings, deck staining to commercial
-                rebrand jobs — Budget Pro is the one-call paint partner keeping central Iowa
-                sharp and well-finished.
+                Our team brings skill, experience, and attention to detail to every job, ensuring clean finishes and long-lasting results. We believe in honest communication, fair pricing, and dependable service from start to finish.
               </p>
 
               <div

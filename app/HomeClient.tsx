@@ -6,8 +6,11 @@ import { TypeAnimation } from "react-type-animation";
 import CountUp from "react-countup";
 import {
   Paintbrush,
+  PaintRoller,
+  Building2,
   Droplets,
   Home as HomeIcon,
+  ChefHat,
   ArrowRight,
   Phone,
   Star,
@@ -16,30 +19,71 @@ import {
   Clock,
   DollarSign,
   Award,
+  Heart,
+  Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const services = [
   {
     Icon: Paintbrush,
-    title: "Interior & Exterior Painting",
-    desc: "Clean lines, proper prep, and finishes that last. Commercial and residential. Whole-house repaints to single accent walls.",
-    href: "/services/painting",
+    title: "Interior Painting",
+    desc: "Whole-house repaints, single rooms, accent walls, trim. Clean lines, premium product, factory-smooth finish.",
+    href: "/services/interior-painting",
     swatch: "#1A37A8",
+  },
+  {
+    Icon: PaintRoller,
+    title: "Exterior Painting",
+    desc: "Siding, trim, fascia, shutters. Weather-grade products that survive Iowa winters. Pressure-wash, prep, and two full coats every time.",
+    href: "/services/exterior-painting",
+    swatch: "#E30613",
   },
   {
     Icon: Droplets,
     title: "Deck & Fence Staining",
-    desc: "Wood protected, grain brought back to life. Semi-transparent, solid, and sealer applications for Iowa weather.",
+    desc: "Wood stripped, sanded, and protected. Semi-transparent, solid, or clear sealer for the exposure your wood actually gets.",
     href: "/services/staining",
     swatch: "#8B3A16",
   },
   {
+    Icon: Building2,
+    title: "Commercial Painting",
+    desc: "Retail, office, multi-tenant, industrial. Interior and exterior with after-hours scheduling so your business never loses a day.",
+    href: "/services/commercial-painting",
+    swatch: "#0A0F1E",
+  },
+  {
     Icon: HomeIcon,
     title: "Garage Floor Coatings",
-    desc: "Epoxy and polyaspartic floor systems. Showroom finish, chemical-proof, built to take the worst Iowa winter can throw at it.",
+    desc: "Epoxy and polyaspartic floor systems. Diamond-ground prep. Showroom finish, chemical-proof, Iowa-tough.",
     href: "/services/garage-floor",
     swatch: "#4A4E52",
+  },
+  {
+    Icon: ChefHat,
+    title: "Kitchen & Cabinet Refinishing",
+    desc: "Fraction-of-a-remodel cost. Doors sprayed in a controlled booth for a factory-smooth finish. New kitchen, no gut job.",
+    href: "/services/cabinet-refinishing",
+    swatch: "#2449C7",
+  },
+];
+
+const coreValues = [
+  {
+    Icon: Shield,
+    title: "Radical Integrity",
+    desc: "We operate with complete honesty, transparency, and accountability. If we say it, we mean it. If we quote it, we deliver it.",
+  },
+  {
+    Icon: Heart,
+    title: "People First",
+    desc: "Our customers and team come first. Every call, every walk-through, every follow-up — handled like you're a neighbor, because in central Iowa you are.",
+  },
+  {
+    Icon: Award,
+    title: "Process Perfection",
+    desc: "We follow proven systems and precise workmanship. Proper prep, two coats, premium product, punch-walk. Every job, no exceptions.",
   },
 ];
 
@@ -77,21 +121,27 @@ const whyChoose = [
 const testimonials = [
   {
     quote:
-      "Peter repainted our entire house exterior in two days. Clean lines, not a drop of paint anywhere it shouldn't be. Quote matched the final invoice exactly.",
-    name: "Marcus R.",
-    city: "Altoona, IA",
+      "Budget Pro Painting did an amazing job on the interior painting. The team was professional, clean, and finished on time. The quality of work exceeded our expectations.",
+    name: "Sarah M.",
+    city: "Verified Google Review",
   },
   {
     quote:
-      "Had three quotes for our retail repaint. Budget Pro was the fairest price AND the only one who didn't try to upsell us on a pressure wash we didn't need. Hired them on the spot.",
-    name: "Jenna T.",
-    city: "Des Moines, IA",
+      "Hired Budget Pro for our exterior painting and couldn't be happier. Great communication, fair pricing, and excellent workmanship. Highly recommend.",
+    name: "James R.",
+    city: "Verified Google Review",
   },
   {
     quote:
-      "Garage floor epoxy is pristine six months later. Didn't chip when we dropped a wrench on it, didn't stain when I spilled oil. Worth every penny.",
-    name: "David K.",
-    city: "Ankeny, IA",
+      "The drywall repairs and painting they did for us were flawless. They paid attention to every detail and made sure everything was perfect.",
+    name: "Linda T.",
+    city: "Verified Google Review",
+  },
+  {
+    quote:
+      "Had our kitchen cabinets refinished and they look incredible. Saved a ton of money compared to replacing, and the quality exceeded our expectations.",
+    name: "Michael D.",
+    city: "Verified Google Review",
   },
 ];
 
@@ -239,7 +289,21 @@ export default function HomeClient() {
         .bp-tests-head { text-align: center; margin-bottom: 56px; max-width: 720px; margin-left: auto; margin-right: auto; }
         .bp-tests-head h2 { font-size: clamp(34px, 4.8vw, 58px); font-weight: 900; letter-spacing: -0.035em; color: #0A0F1E; }
         .bp-tests-head h2 em { font-style: normal; color: #1A37A8; }
-        .bp-tests-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .bp-tests-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 1100px; margin: 0 auto; }
+
+        /* ============ CORE VALUES ============ */
+        .bp-values { padding: 96px 0; background: #FAF7F1; position: relative; }
+        .bp-values-head { max-width: 1320px; margin: 0 auto 48px; padding: 0 32px; text-align: center; }
+        .bp-values-head h2 { font-size: clamp(34px, 5vw, 60px); font-weight: 900; letter-spacing: -0.035em; line-height: 1.05; color: #0A0F1E; }
+        .bp-values-head h2 em { font-style: normal; color: #E30613; }
+        .bp-values-head p { font-size: 16.5px; color: #3A4158; max-width: 560px; margin: 18px auto 0; }
+        .bp-values-grid { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .bp-value-card { position: relative; background: #fff; border: 1px solid #E4DDD0; border-radius: 4px; padding: 44px 34px 36px; text-align: left; overflow: hidden; transition: transform 0.35s, box-shadow 0.35s; }
+        .bp-value-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, #1A37A8 0%, #E30613 100%); }
+        .bp-value-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(10,15,30,0.12); }
+        .bp-value-icon { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; background: linear-gradient(135deg, #1A37A8 0%, #0F2575 100%); color: #fff; border-radius: 3px; margin-bottom: 22px; }
+        .bp-value-card h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.015em; color: #0A0F1E; margin-bottom: 10px; }
+        .bp-value-card p { font-size: 15px; line-height: 1.7; color: #3A4158; margin: 0; }
         .bp-test { padding: 36px 32px; background: #FAF7F1; border: 1px solid #E4DDD0; border-radius: 4px; border-top: 4px solid #E30613; display: flex; flex-direction: column; }
         .bp-test .stars { display: flex; gap: 3px; margin-bottom: 16px; color: #E30613; }
         .bp-test p { font-size: 15.5px; line-height: 1.7; color: #0A0F1E; margin-bottom: 22px; flex: 1; }
@@ -277,7 +341,10 @@ export default function HomeClient() {
           .bp-hero-trust-item { font-size: 10.5px; letter-spacing: 0.08em; }
           .bp-hero-scroll { display: none; }
 
-          .bp-services, .bp-ba, .bp-about, .bp-tests, .bp-final { padding: 64px 0; }
+          .bp-services, .bp-ba, .bp-about, .bp-tests, .bp-final, .bp-values { padding: 56px 0; }
+          .bp-values-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 22px; }
+          .bp-values-head { padding: 0 22px; margin-bottom: 28px; }
+          .bp-value-card { padding: 32px 24px; }
           .bp-services-head { margin-bottom: 36px; padding: 0 22px; }
           .bp-services-sub { font-size: 15px; }
           .bp-services-grid { grid-template-columns: 1fr; gap: 14px; padding: 0 22px; }
@@ -352,11 +419,11 @@ export default function HomeClient() {
               />
             </div>
             <p className="bp-hero-desc">
-              Owner-operated by Peter Thawngzauk. Clean prep, sharp cut lines, finishes built to take central Iowa weather. <strong>No subs, no surprises, no up-sells.</strong>
+              Expert painting and remodeling you can trust — owner-operated by Peter, serving Altoona, Des Moines, and the surrounding Iowa communities. <strong>Quality workmanship. Honest pricing. Reliable service.</strong>
             </p>
             <div className="bp-hero-ctas">
               <Link href="/quote" className="bp-btn bp-btn-red">
-                Get a Free Quote <ArrowRight size={16} />
+                Get an Estimate <ArrowRight size={16} />
               </Link>
               <a href="tel:+15155056429" className="bp-btn bp-btn-outline">
                 <Phone size={16} /> (515) 505-6429
@@ -419,6 +486,31 @@ export default function HomeClient() {
                     </span>
                   </div>
                 </Link>
+              </ScrollReveal>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ============ CORE VALUES ============ */}
+      <section className="bp-values">
+        <div className="bp-values-head">
+          <ScrollReveal>
+            <div className="bp-eyebrow"><span style={{ width: 6, height: 6, borderRadius: "50%", background: "#1A37A8" }} /> Core Values</div>
+            <h2>What we <em>actually stand for.</em></h2>
+            <p>The three principles that shape every quote, every visit, every finished job.</p>
+          </ScrollReveal>
+        </div>
+        <div className="bp-values-grid">
+          {coreValues.map((v, i) => {
+            const Icon = v.Icon;
+            return (
+              <ScrollReveal key={v.title} delay={i * 120}>
+                <div className="bp-value-card">
+                  <div className="bp-value-icon"><Icon size={24} strokeWidth={1.8} /></div>
+                  <h3>{v.title}</h3>
+                  <p>{v.desc}</p>
+                </div>
               </ScrollReveal>
             );
           })}
@@ -579,7 +671,7 @@ export default function HomeClient() {
             </p>
             <div className="bp-final-ctas">
               <Link href="/quote" className="bp-btn bp-btn-red">
-                Get a Free Quote <ArrowRight size={16} />
+                Get an Estimate <ArrowRight size={16} />
               </Link>
               <a href="tel:+15155056429" className="bp-btn bp-btn-outline">
                 <Phone size={16} /> (515) 505-6429

@@ -412,11 +412,11 @@ export default function ServicePage({
                   }}
                 >
                   <a
-                    href="mailto:bpprllc@gmail.com"
+                    href="mailto:Info@budgetpropainter.com"
                     style={{ display: "flex", gap: 10, alignItems: "center", color: "#D6D0C0" }}
                   >
                     <Mail size={14} style={{ color: "#FF4B57" }} />
-                    <span style={{ wordBreak: "break-all" }}>bpprllc@gmail.com</span>
+                    <span style={{ wordBreak: "break-all" }}>Info@budgetpropainter.com</span>
                   </a>
                   <div style={{ display: "flex", gap: 10, alignItems: "center", color: "#D6D0C0" }}>
                     <MapPin size={14} style={{ color: "#FF4B57" }} />

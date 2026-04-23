@@ -3,12 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown, Paintbrush, Droplets, Home as HomeIcon } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Paintbrush, PaintRoller, Building2, Droplets, Home as HomeIcon, ChefHat } from "lucide-react";
 
 const services = [
-  { href: "/services/painting", label: "Interior & Exterior Painting", icon: Paintbrush },
+  { href: "/services/interior-painting", label: "Interior Painting", icon: Paintbrush },
+  { href: "/services/exterior-painting", label: "Exterior Painting", icon: PaintRoller },
   { href: "/services/staining", label: "Deck & Fence Staining", icon: Droplets },
+  { href: "/services/commercial-painting", label: "Commercial Painting", icon: Building2 },
   { href: "/services/garage-floor", label: "Garage Floor Coatings", icon: HomeIcon },
+  { href: "/services/cabinet-refinishing", label: "Cabinet Refinishing", icon: ChefHat },
 ];
 
 export default function Navbar() {

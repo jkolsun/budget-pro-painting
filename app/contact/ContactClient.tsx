@@ -265,8 +265,8 @@ export default function ContactClient() {
                 <InfoCard
                   icon={<Mail size={22} />}
                   label="Email"
-                  value="bpprllc@gmail.com"
-                  href="mailto:bpprllc@gmail.com"
+                  value="Info@budgetpropainter.com"
+                  href="mailto:Info@budgetpropainter.com"
                 />
                 <InfoCard
                   icon={<MapPin size={22} />}

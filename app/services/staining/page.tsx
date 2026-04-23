@@ -13,7 +13,7 @@ export default function StainingPage() {
       eyebrow="Decks · Fences · Wood Restoration"
       title="Staining."
       tagline="Wood protected, grain brought back to life. The right stain, applied the right way, holds up for years — not one season."
-      hero="/photos/ba5-after.jpg"
+      hero="/photos/web-deck-stain.jpg"
       intro={[
         "Iowa wood takes a beating. Hot dry summers, deep wet winters, and constant freeze-thaw cycles will turn even pressure-treated lumber gray and split-prone in three years if it isn't sealed properly.",
         "We strip what's failing, sand what's rough, and apply the stain or sealer that actually fits your wood and your exposure. Semi-transparent shows the grain. Solid hides imperfections. A clear sealer locks out water without changing color. We help you pick the right product for your situation.",
