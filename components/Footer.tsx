@@ -20,9 +20,10 @@ const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/service-areas", label: "Service Areas" },
   { href: "/contact", label: "Contact" },
-  { href: "/quote", label: "Free Quote" },
+  { href: "/quote", label: "Free Estimate" },
 ];
 
 export default function Footer() {

@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/garage-floor",
     "/services/cabinet-refinishing",
     "/service-areas",
+    "/gallery",
     "/contact",
     "/quote",
   ];

@@ -151,7 +151,8 @@ export default function Navbar() {
               )}
             </div>
             <Link href="/about" style={linkStyle}>About</Link>
-            <Link href="/service-areas" style={linkStyle}>Service Areas</Link>
+            <Link href="/service-areas" style={linkStyle}>Areas</Link>
+            <Link href="/gallery" style={linkStyle}>Gallery</Link>
             <Link href="/contact" style={linkStyle}>Contact</Link>
           </div>
 
@@ -261,7 +262,8 @@ export default function Navbar() {
             {[
               { name: "Home", href: "/" },
               { name: "About", href: "/about" },
-              { name: "Service Areas", href: "/service-areas" },
+              { name: "Areas", href: "/service-areas" },
+              { name: "Gallery", href: "/gallery" },
               { name: "Contact", href: "/contact" },
             ].map((l) => (
               <Link
