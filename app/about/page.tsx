@@ -34,7 +34,7 @@ const values = [
   {
     icon: Users,
     title: "Community-Rooted",
-    desc: "We live where we work. Your yard is one of our neighbors, and that matters.",
+    desc: "We live where we work. Your home is one of our neighbors, and that matters.",
   },
   {
     icon: Award,
@@ -67,7 +67,7 @@ const timeline = [
   {
     year: "2025",
     title: "Serving All Polk County",
-    desc: "Trusted by homes and businesses across the Wasatch Front, from Des Moines to Grimes.",
+    desc: "Trusted by homes and businesses across central Iowa, from Des Moines to Bondurant.",
   },
 ];
 
@@ -85,8 +85,8 @@ export default function AboutPage() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1920&q=80"
-          alt="Garden path lined with rose bushes and hedges"
+          src="/photos/web-painter-white.jpg"
+          alt="Painter applying fresh paint to a residential exterior — Budget Pro Painting"
           style={{
             position: "absolute",
             inset: 0,
@@ -101,7 +101,7 @@ export default function AboutPage() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(15, 76, 42, 0.8) 0%, rgba(15, 23, 42, 0.75) 100%)",
+              "linear-gradient(180deg, rgba(8, 23, 72, 0.78) 0%, rgba(10, 15, 30, 0.82) 100%)",
             zIndex: 1,
           }}
         />
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 marginBottom: 24,
               }}
             >
-              A family, a<br />
+              A trusted local<br />
               <span
                 style={{
                   background: "linear-gradient(135deg, #FF4B57 0%, #E30613 100%)",
@@ -136,10 +136,10 @@ export default function AboutPage() {
                   backgroundClip: "text",
                 }}
               >
-                community, a yard
+                painting partner
               </span>
               <br />
-              at a time.
+              for central Iowa.
             </h1>
             <p
               style={{
@@ -149,9 +149,10 @@ export default function AboutPage() {
                 lineHeight: 1.65,
               }}
             >
-              Budget Pro Painting is the family-owned painting & remodeling company Polk County
-              homeowners have been looking for. No franchise fees. No corporate runaround.
-              Just Peter and her team, caring for yards the way they&apos;d want their own cared for.
+              Budget Pro Painting &amp; Remodeling LLC is the owner-operated painting partner
+              central Iowa homeowners have been looking for. No franchise fees. No corporate
+              runaround. Just Peter and his crew, painting homes and businesses the way they&apos;d
+              want their own painted.
             </p>
           </div>
         </div>
@@ -171,8 +172,8 @@ export default function AboutPage() {
           >
             <ScrollReveal direction="left">
               <img
-                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1920&q=80"
-                alt="Charming cottage covered in colorful flower beds"
+                src="/photos/web-shutters.jpg"
+                alt="Painter carefully applying exterior paint to home shutters — Budget Pro Painting"
                 style={{
                   width: "100%",
                   height: 600,

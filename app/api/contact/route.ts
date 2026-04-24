@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
                 <!-- Header -->
                 <tr>
                   <td style="background:linear-gradient(135deg,#1A37A8 0%,#0F2575 100%);padding:40px 40px 36px;">
-                    <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF4B57;margin-bottom:12px;">VILLA'S LANDSCAPE</div>
+                    <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:#FF4B57;margin-bottom:12px;">BUDGET PRO PAINTING</div>
                     <h1 style="margin:0;color:#FFFFFF;font-size:28px;font-weight:800;letter-spacing:-0.02em;">New ${formType}</h1>
                     <p style="margin:8px 0 0;color:#B8A88F;font-size:14px;">from budgetpropainting.com</p>
                   </td>

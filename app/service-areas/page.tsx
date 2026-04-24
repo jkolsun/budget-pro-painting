@@ -52,8 +52,9 @@ export default function ServiceAreasPage() {
             <span style={{ color: "#1A37A8" }}>all Polk County.</span>
           </h1>
           <p style={{ fontSize: 18, color: "#3A4158", maxWidth: 640 }}>
-            Based in Altoona, Budget Pro Painting cares for yards across 13 cities throughout
-            Polk County and the surrounding Wasatch Front.
+            Based in Altoona — we deliver clean, sharp-finished painting work to homes and
+            businesses across 12 central Iowa cities throughout Polk County and the surrounding
+            Des Moines metro.
           </p>
         </div>
       </section>

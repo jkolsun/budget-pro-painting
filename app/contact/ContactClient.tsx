@@ -61,7 +61,7 @@ export default function ContactClient() {
           >
             Let&apos;s talk about
             <br />
-            <span style={{ color: "#1A37A8" }}>your yard.</span>
+            <span style={{ color: "#1A37A8" }}>your project.</span>
           </h1>
           <p style={{ fontSize: 18, color: "#3A4158", maxWidth: 620 }}>
             Call, text, email, or drop us a note below. Peter reads every message personally and
@@ -214,7 +214,7 @@ export default function ContactClient() {
                         id="message"
                         name="message"
                         required
-                        placeholder="Tell us about your yard, what you need, and any timing info..."
+                        placeholder="Tell us about your project — what you need, surfaces involved, and any timing info..."
                       />
                     </div>
 

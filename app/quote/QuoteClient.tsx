@@ -14,13 +14,14 @@ import {
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const serviceList = [
-  "Lawn Maintenance",
-  "Sod Installation",
-  "Rock & Mulch",
-  "Sprinkler Systems",
-  "Drip Irrigation",
-  "Flower Beds & Gardens",
-  "Seasonal Cleanups",
+  "Interior Painting",
+  "Exterior Painting",
+  "Deck & Fence Staining",
+  "Commercial Painting",
+  "Garage Floor Coatings (Epoxy)",
+  "Kitchen & Cabinet Refinishing",
+  "Drywall & Plastering",
+  "Other / Not Sure",
 ];
 
 export default function QuoteClient() {
@@ -272,7 +273,7 @@ export default function QuoteClient() {
                           <option>Within 2 weeks</option>
                           <option>Within a month</option>
                           <option>Just exploring options</option>
-                          <option>Seasonal / recurring service</option>
+                          <option>Flexible / no rush</option>
                         </select>
                       </div>
                     </div>
@@ -327,7 +328,7 @@ export default function QuoteClient() {
                         className="textarea"
                         id="details"
                         name="details"
-                        placeholder="Tell us about your yard — size, condition, goals, and anything else that would help us give an accurate quote..."
+                        placeholder="Tell us about your project — square footage, surfaces (interior walls, exterior siding, deck, cabinets, garage floor), color ideas, timing, and anything else that would help us give an accurate quote..."
                       />
                     </div>
 
@@ -408,7 +409,7 @@ export default function QuoteClient() {
                     {
                       icon: <Sparkles size={20} />,
                       title: "Full-service",
-                      desc: "One trusted partner for every yard need.",
+                      desc: "One trusted partner for every paint and refinishing job.",
                     },
                   ].map((b) => (
                     <div key={b.title} style={{ display: "flex", gap: 14 }}>
