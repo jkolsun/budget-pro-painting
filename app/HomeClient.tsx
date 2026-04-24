@@ -363,66 +363,96 @@ export default function HomeClient() {
           .bp-hero-inner { grid-template-columns: 1fr; gap: 36px; }
         }
         @media (max-width: 900px) {
+          /* HERO — tighter overall */
           .bp-hero { min-height: auto; align-items: stretch; }
-          .bp-hero-inner { padding: 120px 22px 64px; gap: 28px; text-align: center; justify-items: center; }
-          .bp-hero-stripe { width: 50px; transform: skewX(-6deg) translateX(25px); opacity: 0.7; }
+          .bp-hero-inner { padding: 108px 20px 48px; gap: 22px; text-align: center; justify-items: center; }
+          .bp-hero-stripe { width: 36px; transform: skewX(-6deg) translateX(18px); opacity: 0.6; }
           .bp-hero-copy { max-width: 100%; }
-          .bp-hero-pill { font-size: 10.5px; letter-spacing: 0.16em; padding: 6px 12px; margin-bottom: 18px; align-self: center; }
-          .bp-hero-desc { font-size: 15px; margin: 0 auto 28px; max-width: 38ch; }
-          .bp-hero-ctas { flex-direction: column; gap: 10px; width: 100%; margin-bottom: 32px; justify-content: center; }
-          .bp-hero-ctas > * { width: 100%; justify-content: center; padding: 16px 22px; font-size: 13.5px; }
-          .bp-hero-trust { gap: 14px; padding-top: 20px; justify-content: center; max-width: 100%; }
-          .bp-hero-trust-item { font-size: 10.5px; letter-spacing: 0.08em; }
+          .bp-hero-pill { font-size: 10px; letter-spacing: 0.14em; padding: 5px 11px; margin-bottom: 14px; align-self: center; }
+          .bp-hero h1 { font-size: clamp(38px, 9.5vw, 52px); margin-bottom: 14px; }
+          .bp-hero-type { font-size: 14px; min-height: 22px; margin-bottom: 12px; }
+          .bp-hero-desc { font-size: 14.5px; margin: 0 auto 22px; max-width: 36ch; line-height: 1.55; }
+          .bp-hero-ctas { flex-direction: column; gap: 9px; width: 100%; margin-bottom: 22px; justify-content: center; }
+          .bp-hero-ctas > * { width: 100%; justify-content: center; padding: 14px 20px; font-size: 13px; }
+          /* Hide the long trust pill row on mobile — already covered by chrome elsewhere */
+          .bp-hero-trust { display: none; }
           .bp-hero-scroll { display: none; }
-          /* Logo plate centered up top, sized big */
+          /* Logo plate centered up top, sized smaller for less vertical bulk */
           .bp-hero-logo-plate {
-            order: -1; transform: none; width: min(420px, 90vw); padding: 26px 28px 24px;
-            margin: 0 auto; box-shadow: 0 18px 44px rgba(0,0,0,0.45);
+            order: -1; transform: none; width: min(360px, 88vw); padding: 18px 22px 16px;
+            margin: 0 auto; box-shadow: 0 14px 36px rgba(0,0,0,0.4); gap: 12px;
           }
-          .bp-hero-logo-plate img { max-height: 140px; }
-          .bp-hero-logo-foot { font-size: 10.5px; letter-spacing: 0.12em; }
+          .bp-hero-logo-plate img { max-height: 100px; }
+          .bp-hero-logo-tag { font-size: 9.5px; padding: 4px 9px; }
+          .bp-hero-logo-foot { font-size: 10px; letter-spacing: 0.1em; padding-top: 10px; }
 
-          .bp-services, .bp-ba, .bp-about, .bp-tests, .bp-final, .bp-values { padding: 56px 0; }
-          .bp-values-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 22px; }
-          .bp-values-head { padding: 0 22px; margin-bottom: 28px; }
-          .bp-value-card { padding: 32px 24px; }
-          .bp-services-head { margin-bottom: 36px; padding: 0 22px; }
-          .bp-services-sub { font-size: 15px; }
-          .bp-services-grid { grid-template-columns: 1fr; gap: 14px; padding: 0 22px; }
-          .bp-service-card { padding: 32px 24px; }
-          .bp-service-card h3 { font-size: 22px; }
-          .bp-service-card p { font-size: 14.5px; }
+          /* Tighter section paddings across the board */
+          .bp-services, .bp-ba, .bp-about, .bp-tests, .bp-final, .bp-values { padding: 44px 0; }
 
-          .bp-ba-inner { padding: 0 22px; }
-          .bp-ba-head { margin-bottom: 32px; }
-          .bp-ba-head p { font-size: 15px; }
-          .bp-ba-caption { grid-template-columns: 1fr; gap: 14px; padding: 18px 20px; }
-          .bp-ba-caption h4 { font-size: 17px; }
-          .bp-ba-caption p { font-size: 13.5px; }
-          .bp-ba-label { padding: 6px 12px; font-size: 10px; letter-spacing: 0.18em; top: 14px; }
-          .bp-ba-label.before { left: 14px; }
-          .bp-ba-label.after { right: 14px; }
-          .bp-ba-handle { width: 34px; height: 34px; font-size: 14px; }
+          /* Tighter section heading spacing */
+          .bp-services-head, .bp-ba-head, .bp-tests-head, .bp-values-head { margin-bottom: 26px; padding: 0 20px; }
+          .bp-services h2, .bp-ba-head h2, .bp-tests-head h2, .bp-values-head h2 { font-size: clamp(28px, 8vw, 36px) !important; }
+          .bp-services-sub, .bp-ba-head p, .bp-values-head p { font-size: 14.5px; }
+          .bp-eyebrow { font-size: 10px; letter-spacing: 0.18em; padding: 5px 12px; margin-bottom: 12px; }
 
-          .bp-about-inner { grid-template-columns: 1fr; gap: 44px; padding: 0 22px; }
-          .bp-about-img { aspect-ratio: 4/3; }
-          .bp-about-img::after { width: 60px; height: 60px; left: -10px; bottom: -10px; }
-          .bp-about-img::before { width: 80px; height: 80px; right: -12px; top: -12px; }
-          .bp-why { grid-template-columns: 1fr; gap: 14px; }
+          /* Services — 1-col, tighter padding */
+          .bp-services-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 20px; }
+          .bp-service-card { padding: 26px 22px; }
+          .bp-service-card h3 { font-size: 20px; margin-bottom: 10px; }
+          .bp-service-card p { font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+          .bp-service-icon-box { width: 50px; height: 50px; margin-bottom: 18px; }
 
-          .bp-stats-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 0 22px; }
-          .bp-stat + .bp-stat::before { display: none; }
+          /* Before/after */
+          .bp-ba-inner { padding: 0 20px; }
+          .bp-ba-caption { grid-template-columns: 1fr; gap: 12px; padding: 16px 18px; margin-top: 18px; }
+          .bp-ba-caption h4 { font-size: 16px; }
+          .bp-ba-caption p { font-size: 13px; line-height: 1.55; }
+          .bp-ba-label { padding: 5px 10px; font-size: 9.5px; letter-spacing: 0.16em; top: 12px; }
+          .bp-ba-label.before { left: 12px; }
+          .bp-ba-label.after { right: 12px; }
+          .bp-ba-handle { width: 30px; height: 30px; font-size: 12px; }
 
-          .bp-tests-inner { padding: 0 22px; }
-          .bp-tests-head { margin-bottom: 32px; }
-          .bp-tests-grid { grid-template-columns: 1fr; gap: 14px; }
-          .bp-test { padding: 28px 24px; }
-          .bp-test p { font-size: 14.5px; }
+          /* Core values — 1 col, tighter cards */
+          .bp-values-grid { grid-template-columns: 1fr; gap: 10px; padding: 0 20px; }
+          .bp-value-card { padding: 24px 22px 22px; }
+          .bp-value-card h3 { font-size: 19px; margin-bottom: 8px; }
+          .bp-value-card p { font-size: 14px; line-height: 1.6; }
+          .bp-value-icon { width: 46px; height: 46px; margin-bottom: 16px; }
 
-          .bp-final-inner { padding: 0 22px; }
-          .bp-final p { font-size: 15.5px; margin-bottom: 28px; }
-          .bp-final-ctas { flex-direction: column; gap: 10px; }
-          .bp-final-ctas > * { width: 100%; justify-content: center; }
+          /* About */
+          .bp-about-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+          .bp-about-img { aspect-ratio: 4/3; max-height: 280px; }
+          .bp-about-img img { max-height: 280px; }
+          .bp-about-img::after { width: 50px; height: 50px; left: -8px; bottom: -8px; }
+          .bp-about-img::before { width: 60px; height: 60px; right: -10px; top: -10px; }
+          .bp-about-badge { padding: 10px 14px; bottom: 16px; left: 16px; }
+          .bp-about-badge .n { font-size: 24px; }
+          .bp-about-copy h2 { font-size: clamp(28px, 7.5vw, 38px) !important; margin-bottom: 16px; }
+          .bp-about-copy p { font-size: 15px; line-height: 1.65; margin-bottom: 14px; }
+          .bp-why { grid-template-columns: 1fr; gap: 12px; margin-top: 24px; padding-top: 22px; }
+          .bp-why-card h4 { font-size: 14.5px; }
+          .bp-why-card p { font-size: 13px; }
+
+          /* HIDE STATS on mobile — saves ~200px scroll, redundant with About badge */
+          .bp-stats { display: none !important; }
+
+          /* Testimonials — only show top 2 on mobile, 1 col stacked */
+          .bp-tests-inner { padding: 0 20px; }
+          .bp-tests-grid { grid-template-columns: 1fr; gap: 12px; max-width: 100%; }
+          .bp-tests-grid > *:nth-child(n+3) { display: none; }
+          .bp-test { padding: 22px 20px; }
+          .bp-test p { font-size: 14px; line-height: 1.6; margin-bottom: 18px; }
+          .bp-test .stars { margin-bottom: 12px; }
+
+          /* Final CTA */
+          .bp-final-inner { padding: 0 20px; }
+          .bp-final h2 { font-size: clamp(30px, 8vw, 44px) !important; margin-bottom: 16px; }
+          .bp-final p { font-size: 14.5px; margin-bottom: 24px; }
+          .bp-final-ctas { flex-direction: column; gap: 9px; }
+          .bp-final-ctas > * { width: 100%; justify-content: center; padding: 14px 22px; font-size: 13px; }
+
+          /* Paint swatch divider — thinner */
+          .bp-swatch-strip { height: 6px; }
         }
       `}</style>
 
@@ -543,32 +573,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* ============ CORE VALUES ============ */}
-      <section className="bp-values">
-        <div className="bp-values-head">
-          <ScrollReveal>
-            <div className="bp-eyebrow"><span style={{ width: 6, height: 6, borderRadius: "50%", background: "#1A37A8" }} /> Core Values</div>
-            <h2>What we <em>actually stand for.</em></h2>
-            <p>The three principles that shape every quote, every visit, every finished job.</p>
-          </ScrollReveal>
-        </div>
-        <div className="bp-values-grid">
-          {coreValues.map((v, i) => {
-            const Icon = v.Icon;
-            return (
-              <ScrollReveal key={v.title} delay={i * 120}>
-                <div className="bp-value-card">
-                  <div className="bp-value-icon"><Icon size={24} strokeWidth={1.8} /></div>
-                  <h3>{v.title}</h3>
-                  <p>{v.desc}</p>
-                </div>
-              </ScrollReveal>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* ============ BEFORE/AFTER SLIDER ============ */}
+      {/* ============ BEFORE/AFTER SLIDER (right after services) ============ */}
       <section className="bp-ba">
         <div className="bp-ba-inner">
           <div className="bp-ba-head">
@@ -607,6 +612,31 @@ export default function HomeClient() {
               </div>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ============ CORE VALUES ============ */}
+      <section className="bp-values">
+        <div className="bp-values-head">
+          <ScrollReveal>
+            <div className="bp-eyebrow"><span style={{ width: 6, height: 6, borderRadius: "50%", background: "#1A37A8" }} /> Core Values</div>
+            <h2>What we <em>actually stand for.</em></h2>
+            <p>The three principles that shape every quote, every visit, every finished job.</p>
+          </ScrollReveal>
+        </div>
+        <div className="bp-values-grid">
+          {coreValues.map((v, i) => {
+            const Icon = v.Icon;
+            return (
+              <ScrollReveal key={v.title} delay={i * 120}>
+                <div className="bp-value-card">
+                  <div className="bp-value-icon"><Icon size={24} strokeWidth={1.8} /></div>
+                  <h3>{v.title}</h3>
+                  <p>{v.desc}</p>
+                </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </section>
 
